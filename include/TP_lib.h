@@ -1,6 +1,6 @@
 /****************************************************
 *                                                   *
-*  TP_lib  pour les premiers Thèmes Génie Logiciel  * 
+*  TP_lib  pour les premiers Thï¿½mes Gï¿½nie Logiciel  * 
 *													*
 *****************************************************
 Auteurs : S. Moutault - A. Priou
@@ -19,13 +19,13 @@ long int  calculer_max_2_entiers ( long int a, long int b ) ;
 double saisir_montant ( void ) ;   /* pour la saisie d'un montant d'achat */
 
 void afficher_remise ( double montant_final, double remise );  
-	/* 1er argument = montant APRES déduction de la remise - 2eme argument = remise a deduire */
+	/* 1er argument = montant APRES dï¿½duction de la remise - 2eme argument = remise a deduire */
 
 
 /*------------------------------ lancer de de ------------------------------------------------*/
 
-short int LancerDe (void);	/* retourne un nombre aléatoire compris entre 1 et 6 */
-							/* permet de simuler le lancer d'un dé */
+short int LancerDe (void);	/* retourne un nombre alï¿½atoire compris entre 1 et 6 */
+							/* permet de simuler le lancer d'un dï¿½ */
 
 
 /*-------------------------cryptage par entrelacement-----------------------------------------*/
@@ -36,13 +36,13 @@ long int  extraire_un_chiffre ( long int Nbre , long int PositionChiffre ) ;
 #ifdef AGNES_VERSION 
 long int inserer_un_chiffre( long int Chiffre, long int Nbre , long int Position );
 	/* insere le chiffre dans Nbre au rang Position (sans toucher aux autres chiffres de Nbre),
-	puis renvoie le nombre ainsi complété. La position indiquee est supposee 
+	puis renvoie le nombre ainsi complï¿½tï¿½. La position indiquee est supposee 
 	etre "libre" dans Nbre (cad occupee par un chiffre nul par defaut). */          
 
 #else  /*AGNES_VERSION*/
 long int inserer_un_chiffre( long int Nbre , long int Chiffre, long int Position );
-	/* insère le chiffre dans Nbre au rang Position (sans toucher aux autres chiffres de Nbre),
-	puis renvoie le nombre ainsi complété. La position indiquée effacée au préalable. */     
+	/* insï¿½re le chiffre dans Nbre au rang Position (sans toucher aux autres chiffres de Nbre),
+	puis renvoie le nombre ainsi complï¿½tï¿½. La position indiquï¿½e effacï¿½e au prï¿½alable. */     
 #endif
 
 /*-----------------------------  diverses fonctions du TD GL2 -----------------------------------*/
@@ -54,21 +54,21 @@ void afficherCodeAcces(unsigned short code);  /* affiche le code fourni en argum
 /*-------------------------------------------------------------------------------------------*/
 
 unsigned char lirePortA(void); 	/* simule la lecture du port A avec le clavier :
-								renvoie le code ASCII de la touche appuyée si une touche est enfoncée 
-								au clavier (sans attente), renvoie 0 si aucune touche n'est appuyée */
+								renvoie le code ASCII de la touche appuyï¿½e si une touche est enfoncï¿½e 
+								au clavier (sans attente), renvoie 0 si aucune touche n'est appuyï¿½e */
 
-void allumerLed1(void);		/* simule l'affichage d'une LED avec un message à l'écran */ 
+void allumerLed1(void);		/* simule l'affichage d'une LED avec un message ï¿½ l'ï¿½cran */ 
 
 void attendreSec(long sec); /* attente */
 
-void ecrirePortA(unsigned char val);  /*simule l'écriture sur le port A via affichage écran*/ 
+void ecrirePortA(unsigned char val);  /*simule l'ï¿½criture sur le port A via affichage ï¿½cran*/ 
 
 void afficherChiffre(short chiffre) ;  /*affiche un chiffre hexa*/
 
 /*-------------------------------------------------------------------------------------------*/
 
 int testerNombre(long nombre);	/* renvoie -1 (inf), 0 (egal) ou 1 (sup) selon la position
-								de nombre par rapport au nbre à deviner */
+								de nombre par rapport au nbre ï¿½ deviner */
 
 void afficherNbTentatives(long nbTentatives);
 
@@ -77,7 +77,7 @@ void afficherNbTentatives(long nbTentatives);
 //int estBissextile(unsigned long annee);
 
 void afficherJour(unsigned long date, unsigned short jour); /* Si on lui fournit 
-															date=17022006 (17 février 2004) et jour=3 (mercredi), 
+															date=17022006 (17 fï¿½vrier 2004) et jour=3 (mercredi), 
 															cette fct affiche :
-															"Le 17 février 2006 est un mercredi" */
+															"Le 17 fï¿½vrier 2006 est un mercredi" */
 
