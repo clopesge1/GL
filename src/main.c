@@ -2,8 +2,20 @@
 //
 
 #include "my_header.h"
+#include "TP_lib.h"
 
-int main(void)
+short int LancerDe (void);
+
+void main (void)
 {
-    return 0;
+	
+	short resultat, i=0;
+		while(i<10)
+		{
+		resultat = LancerDe();
+		i++;
+		}
+
+    i=i+0;
+
 }
