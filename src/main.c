@@ -8,11 +8,11 @@
  int i;
  int val_rand;
  
-    unsigned long long int S1 = 1;
-	unsigned long int S2 = 1;
+    unsigned long long int S1 = 3;
+	unsigned long int S2 = 3;
 	unsigned short int S3 = 0;
 	
-    unsigned char N = 1;
+    unsigned char N = 2;
 	unsigned char N2max=0;
 	
 unsigned long int calculer_S1(void); 
@@ -50,7 +50,7 @@ unsigned long int calculer_N2max(void)
 	N=0; 
 	while(N<100)
     {   
-		if (S2<=9876)
+		if (3*N<=9876)
 		{
         S2 = S2 + 3*N;
         N = N + 1;
