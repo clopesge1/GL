@@ -1,6 +1,7 @@
 //  Copyright (c) 2018 Antoine Tran Tan
 //
 
+#include <ansi_c.h>
 #include "my_header.h"
 #include "stdlib.h"
 #define seuil 5
@@ -8,13 +9,22 @@
 #define seuilb -100
 void bin_tab(void); 
 void sat_tab(void);
+void dist_tab(void);
+void dif2_tab(void);
 unsigned char bin[10]={0,1,2,3,4,5,6,7,8,9};
 unsigned char sat[10]={0,1,2,3,4,5,6,7,8,9};
+unsigned char dist[10]={0,1,2,3,4,5,6,7,8,9};
+unsigned char A[7]={0,7,19,3,8,15,11};
+unsigned char B[6]={0,1,2,3,4,5,6}; 
 int i;
+int n;
 int main(void)
 {
+	srand(time(NULL));							 
 	sat_tab();
 	bin_tab();
+	dist_tab();
+	dif2_tab();
 	
     return 0;
 }
@@ -24,7 +34,7 @@ int main(void)
 
 	void bin_tab(void)
 	{
-	for (i=0 ; i>9; i++);
+	for (i=0 ; i<10; i++){
 	if (bin[i]>seuil)
 	{
 		
@@ -33,12 +43,13 @@ int main(void)
 		
 		bin[i]=0;
 	}
+	}
 }
 
 	void sat_tab(void)
 	{
 		char val=0;
-		for (i=0 ; i>9; i++);
+		for (i=0 ; i<10; i++){
 		val = (rand()%400+1)-100;
 	if (val > seuilh)
 		{ sat[i] = seuilh;
@@ -50,4 +61,18 @@ int main(void)
 			 else  {
 				 sat[i] = val;
 		}
+		}
 	}
+	void dist_tab(void){
+	for (i=1; i<10; i++)
+	dist[i]= dist[i]-dist[i-1];
+	}
+
+void dif2_tab(void)
+{
+for ( i=6, n=0 ; i>0 ; i--, n++)
+    {
+	  B[n] = A[i];
+    }
+	
+}
