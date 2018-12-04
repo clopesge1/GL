@@ -1,36 +1,27 @@
 //  Copyright (c) 2018 Antoine Tran Tan
 //
 
+#include <ansi_c.h>
 #include "my_header.h"
-#include "TP_lib_suite.h"
-		unsigned char lotowin[6]={11,34,7,12,31,5};
-		unsigned char lotojoueur[6]={5,34,27,2,31,3};
-void verif (unsigned char lotowin[6],unsigned char lotojoueur[6]);
-
-   int i,n;
-   int val_egal=0;
-
 
 int main(void)
-{
+{  
+char phrase[99] = "je mappelle Americo Lopes et j'ai 19 ans";
+ int age;
+char prenom [99];
+char nom [99]; 
 
-verif(lotowin,lotojoueur);
+
+	//sscanf(phrase,"%*s%*s%s%s%*s%*s%d%*s",prenom,&nom,&age);
+	printf("prenom");
+	scanf("%s",prenom );
 	
-    return 0;
-}
-
-
-void verif ( unsigned char lotowin[6],unsigned char lotojoueur[6])
-{
-  for (i=0 ; i<6; i++){
-	  
-  for(n=0; n<6; n++){
-		  if(lotowin[i]==lotojoueur[n])
-		  {
-		    val_egal = val_egal + 1;
-		  }
-  }
-	  
-	  
-  }
+	printf("nom");
+	scanf("%s",nom );
+	
+	printf("age");
+	scanf("%d",&age );
+	
+	sscanf(phrase,"%*s%*s%s%s%*s%*s%d%*s",prenom,nom,&age);
+	return 0; 
 }
