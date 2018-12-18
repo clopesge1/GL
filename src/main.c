@@ -1,27 +1,25 @@
-//  Copyright (c) 2018 Antoine Tran Tan
-//
-
-#include <iostream>
-#include <my_header.hpp>
-#include <cmath>
 #include <cstdint>
+#include <cstdio>
+#include <my_header.hpp>
 
-int main()
+
+long int saisir_anneau( unsigned int val_min, unsigned int val_max, unsigned int num_anno)
 {
-    long int anneau1, anneau2, anneau3, val_res;
-    int16_t R;
+    long int double_whooper_cheese;
+    int condition = 0;
 
-    anneau1 = saisir_anneau(0,9,1);
+    printf( "Burger King, Saisisser la valeur de l'anneau %u: ",
+        num_anno );
 
-    anneau2 = saisir_anneau(0,9,2);
+    while( condition == 0 )
+    {
+        scanf( "%u", &double_whooper_cheese );
 
-    anneau3 = saisir_anneau(0,6,3);
+        if( double_whooper_cheese >= val_min && double_whooper_cheese <= val_max )
+            condition = 1;
+        else
+            printf( "Ton double whopper cheese n'a pas de fromage, resaisser la valeur:" );
+    }
 
-
-    // if (c > 7)
-    //     R = -1;
-    // else
-    //     R = (10 * a + b) * (uint16_t)pow(10,c);
-
-
-    return 0;
+    return double_whooper_cheese;
+}

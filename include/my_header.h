@@ -1,9 +1,9 @@
-//  Copyright (c) 2018 Antoine Tran Tan
+//  Copyright (c) 2017 Antoine Tran Tan
 //
 
-#ifndef MY_HEADER_H
-#define MY_HEADER_H
+#ifndef MY_HEADER_HPP
+#define MY_HEADER_HPP
 
+long int saisir_anneau( unsigned int val_min, unsigned int val_max, unsigned int num_anno);
 
-
-#endif
+#endif // MY_HEADER_HPP
